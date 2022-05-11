@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Home from "../../pages/home";
 import StyleMenu from "./Menu.module.scss";
 
 export default function Menu() {
@@ -7,7 +6,7 @@ export default function Menu() {
     <nav className={StyleMenu.nav}>
       <ul className={StyleMenu.nav__ul}>
         <li className={StyleMenu.nav__li}>
-          <Link to="/home">Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li className={StyleMenu.nav__li}>
           <Link to="/projects" >Projects</Link>
