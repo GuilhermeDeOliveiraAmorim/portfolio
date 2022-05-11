@@ -1,0 +1,19 @@
+@import 'styles/variables';
+
+.home {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+
+    height: calc(100vh - 58px);
+
+    background-color: $soft_white;
+    &__item_l {
+        flex-grow: 1;
+    }
+    &__item_r {
+        flex-grow: 2;
+    }
+}

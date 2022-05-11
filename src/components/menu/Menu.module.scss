@@ -5,7 +5,8 @@
     align-items: center;
     justify-content: center;
     padding: 20px $padding-horizontal;
-    background-color: $black_coral;
+    background-color: $soft_black;
+    height: 58px;
     @media (max-width: $desktop_xsm) {
         padding: 20px $padding-horizontal-mobile;
     }
@@ -23,14 +24,14 @@
         list-style-type: none;
         padding: 0 20px;
         a {
-            color: $indian_red;
+            color: $mustard;
             cursor: pointer;
-            font-size: 24px;
-            font-weight: 600;
+            font-size: 18px;
+            font-weight: 400;
             text-decoration: none;
             transition: 0.2s ease;
             &:hover {
-                color: $morning_blue;
+                color: $soft_white;
             }
         }
     }

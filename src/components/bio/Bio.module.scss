@@ -1,0 +1,9 @@
+@import "styles/variables";
+
+.bio {
+    flex-grow: 1;
+    height: calc(100vh - 98px);
+    padding: 10px;
+    background-color: $mustard;
+    border-radius: 20px;
+}
