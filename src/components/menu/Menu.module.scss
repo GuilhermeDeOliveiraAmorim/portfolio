@@ -7,7 +7,6 @@
         list-style-type: none;
 
         margin: 0;
-        padding: 10px;
 
         overflow: hidden;
 
@@ -15,7 +14,12 @@
     }
     &__li {
         float: left;
-        border-right:1px solid #db5461;
-        padding: 5px;
+
+        padding: 10px;
+
+        border-right:1px solid #f1edee;
+        color: #f1edee;
+
+        font-size: 25px;
     }
 }

@@ -1,9 +1,16 @@
+import Card from "../../components/card";
+
 export default function Projects() {
     return (
         <div>
-            <h1>
-                Projects
-            </h1>
+            <ul>
+                <li>
+                    <Card />
+                </li>
+                <li>
+                    <Card />
+                </li>
+            </ul>
         </div>
     )
 }

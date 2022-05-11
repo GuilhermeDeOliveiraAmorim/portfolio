@@ -1,19 +1,21 @@
-import StyleMenu from './Menu.module.scss';
+import { Link } from "react-router-dom";
+import Home from "../../pages/home";
+import StyleMenu from "./Menu.module.scss";
 
 export default function Menu() {
-    return (
-        <nav className={StyleMenu.nav}>
-            <ul className={StyleMenu.nav__ul}>
-                <li className={StyleMenu.nav__li}>
-                    Home
-                </li>
-                <li className={StyleMenu.nav__li}>
-                    Projects
-                </li>
-                <li className={StyleMenu.nav__li}>
-                    Contact
-                </li>
-            </ul>
-        </nav>
-    );
+  return (
+    <nav className={StyleMenu.nav}>
+      <ul className={StyleMenu.nav__ul}>
+        <li className={StyleMenu.nav__li}>
+          <Link to="/home">Home</Link>
+        </li>
+        <li className={StyleMenu.nav__li}>
+          <Link to="/projects" >Projects</Link>
+        </li>
+        <li className={StyleMenu.nav__li}>
+          <Link to="/contact">Contact</Link>
+        </li>
+      </ul>
+    </nav>
+  );
 }
