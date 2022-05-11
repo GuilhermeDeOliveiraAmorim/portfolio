@@ -2,19 +2,29 @@ import { Link } from "react-router-dom";
 import StyleMenu from "./Menu.module.scss";
 
 export default function Menu() {
-  return (
-    <nav className={StyleMenu.nav}>
-      <ul className={StyleMenu.nav__ul}>
-        <li className={StyleMenu.nav__li}>
-          <Link to="/">Home</Link>
-        </li>
-        <li className={StyleMenu.nav__li}>
-          <Link to="/projects" >Projects</Link>
-        </li>
-        <li className={StyleMenu.nav__li}>
-          <Link to="/contact">Contact</Link>
-        </li>
-      </ul>
-    </nav>
-  );
+    const rotas = [
+        {
+            label: "Home",
+            to: "/",
+        },
+        {
+            label: "Projects",
+            to: "/projects",
+        },
+        {
+            label: "Contact",
+            to: "/contact",
+        },
+    ];
+    return (
+        <nav className={StyleMenu.menu}>
+            <ul className={StyleMenu.menu__list}>
+                {rotas.map((rota, index) => (
+                    <li key={index} className={StyleMenu.menu__link}>
+                        <Link to={rota.to}>{rota.label}</Link>
+                    </li>
+                ))}
+            </ul>
+        </nav>
+    );
 }
