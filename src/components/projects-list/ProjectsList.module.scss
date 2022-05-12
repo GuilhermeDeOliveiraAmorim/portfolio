@@ -2,11 +2,16 @@
 
 .projects_list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
 
     height: calc(100vh - 58px);
 
     background-color: $soft_white;
+    &__project {
+        height: calc(100vh - 98px);
+        background-color: $mustard;
+        border-radius: 20px;
+    }
 }

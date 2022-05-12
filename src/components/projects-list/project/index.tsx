@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import ImgProject from "./img-project";
+import StyleProject from "./Project.module.scss";
 
 interface Props {
     id: string,
@@ -16,9 +17,9 @@ export default function Project(props: Props) {
     return (
         <>
             <ImgProject imgProject={photo} />
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <Link to={git_path} >
+            <h3 className={StyleProject.title}>{title}</h3>
+            <p className={StyleProject.p}>{description}</p>
+            <Link to={git_path} className={StyleProject.p}>
                 Git Path
             </Link>
         </>

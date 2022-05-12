@@ -1,8 +1,19 @@
 @import "styles/variables";
 
 .project {
-    flex-grow: 1;
     height: calc(100vh - 98px);
     background-color: $mustard;
     border-radius: 20px;
+}
+.title {
+    font-size: 20px;
+    text-align: center;
+}
+p {
+    text-align: left;
+    padding: 20px;
+}
+a {
+    text-align: left;
+    padding: 20px;
 }
