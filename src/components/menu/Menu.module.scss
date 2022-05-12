@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     padding: 20px $padding-horizontal;
-    background-color: $soft_black;
+    background-color: $dark_blue;
     height: 58px;
     @media (max-width: $desktop_xsm) {
         padding: 20px $padding-horizontal-mobile;
@@ -31,7 +31,7 @@
             text-decoration: none;
             transition: 0.2s ease;
             &:hover {
-                color: $soft_white;
+                color: #44BBFF;
             }
         }
     }

@@ -18,8 +18,8 @@ export default function Project(props: Props) {
     return (
         <>
             <ImgProject imgProject={photo} />
-            <h3 className={StyleProject.h3}>{title}</h3>
-            <p className={StyleProject.p}>{description}</p>
+            <h3 className={StyleProject.card__h3}>{title}</h3>
+            <p className={StyleProject.card__p}>{description}</p>
             <Link to={git_path} className={StyleProject.card__a}>
                  Git Path <VscLinkExternal />
             </Link>
