@@ -22,7 +22,7 @@ export default function Skills(props: Props) {
     return (
         <div className={StyleSkills.skills}>
             <Photo />
-            <h3>
+            <h3 className={StyleSkills.skills__h3}>
                 Guilherme Amorim
             </h3>
             {skills.map((skill, index) => (
