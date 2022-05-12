@@ -1,11 +1,6 @@
 @import "styles/variables";
 
-.project {
-    height: calc(100vh - 98px);
-    background-color: $mustard;
-    border-radius: 20px;
-}
-.title {
+h3 {
     font-size: 20px;
     text-align: center;
 }

@@ -17,7 +17,7 @@ export default function Project(props: Props) {
     return (
         <>
             <ImgProject imgProject={photo} />
-            <h3 className={StyleProject.title}>{title}</h3>
+            <h3 className={StyleProject.h3}>{title}</h3>
             <p className={StyleProject.p}>{description}</p>
             <Link to={git_path} className={StyleProject.p}>
                 Git Path
