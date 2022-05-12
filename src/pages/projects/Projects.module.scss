@@ -1,0 +1,9 @@
+@import 'styles/variables';
+
+.projects {
+    gap: 20px;
+
+    height: calc(100vh - 58px);
+
+    background-color: $soft_white;
+}

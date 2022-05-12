@@ -1,16 +1,10 @@
-import Card from "../../components/card";
+import ProjectsList from 'components/projects-list';
+import StyleProjects from './Projects.module.scss';
 
 export default function Projects() {
     return (
-        <div>
-            <ul>
-                <li>
-                    <Card />
-                </li>
-                <li>
-                    <Card />
-                </li>
-            </ul>
+        <div className={StyleProjects.projects}>
+            <ProjectsList />
         </div>
     )
 }
