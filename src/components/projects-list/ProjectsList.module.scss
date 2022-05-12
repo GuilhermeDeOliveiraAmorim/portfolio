@@ -1,5 +1,32 @@
 @import "styles/variables";
 
 .projects_list {
-    
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+
+    &__project {
+        background: white;
+        text-decoration: none;
+        color: #444;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        border-radius: 20px;;
+    }
+
+    @media only screen and (min-width: 500px) {
+        .projects_list {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media only screen and (min-width: 850px) {
+        .projects_list {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
 }
