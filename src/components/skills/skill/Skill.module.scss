@@ -1,15 +1,17 @@
 .skills {
-    margin: 0 0 30px 0;
+    margin: 0 0 10px 0;
     padding: 0;
-    width: calc(100% - 50px);
+    width: calc(100%);
+    list-style-type: none;
     li {
-        text-decoration: none;
+        list-style-type: none;
         display: block;
         position: relative;
         background-color: #888;
         color: #fff;
-        margin: 10px 0;
+        margin: 5px 0;
         transition: width 300ms ease-in-out;
+        border-radius: 17px;
         .collapsed & {
             width: 0 !important;
         }

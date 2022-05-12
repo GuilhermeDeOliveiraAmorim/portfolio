@@ -1,3 +1,5 @@
+import StyleSkill from "./Skill.module.scss";
+
 interface Props {
     type: string;
     level: number;
@@ -9,7 +11,7 @@ interface Props {
 export default function Skill(props: Props) {
     const { level, type, index, hue, saturation } = props;
     return (
-        <div>
+        <div className={StyleSkill.skills}>
             <li
                 key={type}
                 style={{
@@ -21,7 +23,6 @@ export default function Skill(props: Props) {
             >
                 <p>
                     {type}
-                    <span>{level}</span>
                 </p>
             </li>
         </div>
