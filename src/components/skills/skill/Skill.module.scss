@@ -1,5 +1,5 @@
 .skills {
-    margin: 0 0 10px 0;
+    margin: 0 0 9px 0;
     padding: 0;
     width: calc(100%);
     list-style-type: none;
@@ -9,23 +9,23 @@
         position: relative;
         background-color: #888;
         color: #fff;
-        margin: 5px 0;
+        margin: 9px 0;
         transition: width 300ms ease-in-out;
-        border-radius: 17px;
+        border-radius: 18px;
         .collapsed & {
             width: 0 !important;
         }
         p {
-            padding: 10px;
+            padding: 7px;
             margin: 0;
             font-weight: bold;
         }
         span {
             position: absolute;
-            right: 10px;
+            right: 15px;
             display: inline-block;
             width: 30px;
-            top: 11px;
+            top: 12px;
             text-align: right;
             font-weight: normal;
             color: #fff;

@@ -1,3 +1,4 @@
+import Photo from "components/photo";
 import Skill from "./skill";
 import StyleSkills from "./Skills.module.scss";
 
@@ -20,7 +21,10 @@ export default function Skills(props: Props) {
     ];
     return (
         <div className={StyleSkills.skills}>
-            <div>Foto</div>
+            <Photo />
+            <h3>
+                Guilherme Amorim
+            </h3>
             {skills.map((skill, index) => (
                 <Skill type={skill.type} level={skill.level} index={index} hue={hue} saturation={saturation} />
             ))}
