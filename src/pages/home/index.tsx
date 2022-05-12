@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <div className={StyleHome.home}>
             <div className={StyleHome.home__item_l}>
-                <Skills />
+                <Skills hue={300} saturation={40} />
             </div>
             <div className={StyleHome.home__item_r}>
                 <Bio />
