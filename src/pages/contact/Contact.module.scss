@@ -1,6 +1,6 @@
 @import 'styles/variables';
 
-.home {
+.contact {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -11,9 +11,9 @@
 
     background-color: $soft_white;
     &__item_l {
-        width: 30%;
+        flex-grow: 1;
     }
     &__item_r {
-        width: 70%;
+        flex-grow: 6;
     }
 }

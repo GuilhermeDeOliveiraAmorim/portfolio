@@ -1,10 +1,20 @@
 @import "styles/variables";
 
 .bio {
-    flex-grow: 1;
-    height: calc(100vh - 98px);
-    padding: 10px;
+    padding: 0;
     background-color: $mustard;
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    &__h3 {
+        border-radius: 20px 20px 0 0;
+        background-color: $dark_blue;
+        text-align: center;
+    }
+    &__p {
+        font-size: 1em;
+        line-height: 21px;
+        color: $dark_blue;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }
