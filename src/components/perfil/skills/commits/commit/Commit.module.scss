@@ -1,0 +1,10 @@
+@import "styles/variables";
+
+.commit {
+    width: 33px;
+    height: 33px;
+    margin: 5px;
+    background: $pale_silver;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

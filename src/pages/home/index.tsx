@@ -1,5 +1,6 @@
 import Credentials from "components/perfil/credentials";
 import Photo from "components/perfil/photo";
+import Skills from "components/perfil/skills";
 import StyleHome from "./Home.module.scss";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
             <div className={StyleHome.perfil}>
                 <Photo />
                 <Credentials />
+                <Skills />
             </div>
             <div className={StyleHome.menu}>
                 
