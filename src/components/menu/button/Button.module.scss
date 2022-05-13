@@ -1,0 +1,18 @@
+@import "styles/variables";
+
+.button {
+    background-color: $pale_silver;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    font-size: 60px;
+    color: $xiketic;
+}

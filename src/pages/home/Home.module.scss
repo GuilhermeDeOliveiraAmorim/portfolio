@@ -2,7 +2,7 @@
 
 .home {
     display: grid;
-    grid-template-columns: 30% 10% 60%;
+    grid-template-columns: 35% 100px calc(65% - 100px);
     padding: 10px;
 }
 
@@ -16,13 +16,16 @@
 
 .menu {
     height: calc(100vh - 20px);
+    width: 100px;
     background-color: $xiketic;
     border-radius: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-right: 10px;
+    padding: 10px;
 }
 
 .content {
+    margin-left: 10px;
     height: calc(100vh - 20px);
     background-color: $antique_brass;
     border-radius: 20px;
