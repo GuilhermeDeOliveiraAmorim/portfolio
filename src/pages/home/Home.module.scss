@@ -1,19 +1,23 @@
-@import 'styles/variables';
+@import "styles/variables";
 
 .home {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 0.3fr 3fr;
+    gap: 10px;
+    padding: 10px;
+}
 
-    height: calc(100vh - 58px);
+.perfil {
+    height: calc(100vh - 20px);
+    background-color: $antique_brass;
+}
 
-    background-color: $soft_white;
-    &__item_l {
-        width: 30%;
-    }
-    &__item_r {
-        width: 70%;
-    }
+.menu {
+    height: calc(100vh - 20px);
+    background-color: $antique_brass;
+}
+
+.content {
+    height: calc(100vh - 20px);
+    background-color: $antique_brass;
 }
