@@ -1,0 +1,36 @@
+@import "styles/variables";
+
+.skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    border-radius: 20px;
+    padding: 4px;
+    margin: 5px;
+
+    background-color: $dark_sienna;
+}
+
+.icon_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:$pale_silver;
+    border-radius: 17px;
+    width: 100%;
+    padding: 5px;
+}
+
+.icon {
+    color: $dark_sienna;
+    font-size: 70px;
+}
+
+.percentage {
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+    color: $pale_silver;
+}

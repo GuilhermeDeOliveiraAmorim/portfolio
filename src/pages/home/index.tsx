@@ -4,6 +4,7 @@ import Photo from "components/perfil/photo";
 import Skills from "components/perfil/skills";
 import StyleHome from "./Home.module.scss";
 import { faLinkedin, faGithubSquare, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons'
+import Commits from "components/perfil/commits";
 
 export default function Home() {
     return (
@@ -12,6 +13,7 @@ export default function Home() {
                 <Photo />
                 <Credentials />
                 <Skills />
+                <Commits />
             </div>
             <div className={StyleHome.menu}>
                 <Button icon={faLinkedin} />
