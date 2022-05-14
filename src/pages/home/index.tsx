@@ -6,6 +6,7 @@ import StyleHome from "./Home.module.scss";
 import { faLinkedin, faGithubSquare, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons'
 import { faUser, faBriefcase, faGraduationCap, faCertificate } from '@fortawesome/free-solid-svg-icons'
 import Commits from "components/perfil/commits";
+import Content from "components/content";
 
 export default function Home() {
     return (
@@ -30,7 +31,7 @@ export default function Home() {
                 </div>
             </div>
             <div className={StyleHome.content}>
-                
+                <Content />
             </div>
         </div>
     )
