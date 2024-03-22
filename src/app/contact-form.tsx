@@ -143,13 +143,7 @@ export function ContactForm() {
                 </Typography>
               </div>
               <div className="flex my-2 gap-5">
-                <EnvelopeIcon className="h-6 w-6 text-white" />
-                <Typography
-                  variant="h6"
-                  color="white"
-                  className="mb-2"
-                  placeholder={""}
-                >
+                <Typography color="white" className="mb-2" placeholder={""}>
                   contato@guilhermeamorim.com
                 </Typography>
               </div>

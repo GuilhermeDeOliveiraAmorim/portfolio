@@ -20,7 +20,10 @@ export function ResumeItem({
       >
         <Icon className="h-6 w-6" strokeWidth={2} />
       </Card>
-      <Typography className="w-full font-normal !text-gray-500" placeholder={""}>
+      <Typography
+        className="w-full text-sm lg:font-normal xl:font-normal !text-gray-500"
+        placeholder={""}
+      >
         {children}
       </Typography>
       <Typography className="w-full font- !text-gray-500" placeholder={""}>

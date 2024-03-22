@@ -15,7 +15,7 @@ function Hero() {
             className="mb-4 lg:text-5xl !leading-tight text-3xl"
             placeholder={""}
           >
-            Transformando ideias em <br /> soluções digitais de excelência.
+            Transformando ideias em soluções digitais de excelência.
           </Typography>
           <Typography
             variant="lead"
@@ -37,11 +37,11 @@ function Hero() {
           </div>
         </div>
         <Image
-          width={1024}
-          height={1024}
+          width={540}
+          height={540}
           alt="team work"
           src="/image/gui.png"
-          className="h-[36rem] w-full rounded-xl object-cover"
+          className="h-[24rem] w-full rounded-xl object-cover"
         />
       </div>
     </header>

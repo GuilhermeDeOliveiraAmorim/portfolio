@@ -43,7 +43,10 @@ export function Resume() {
           <Typography variant="h2" color="blue-gray" placeholder={""}>
             Currículo
           </Typography>
-          <Typography className="mb-4 mt-3 w-9/12 font-normal !text-gray-500" placeholder={""}>
+          <Typography
+            className="mb-4 mt-3 lg:w-9/12 font-normal !text-gray-500"
+            placeholder={""}
+          >
             Com mais de 10 anos de experiência em desenvolvimento web e 4 anos
             em backend, trago expertise em criar soluções digitais eficientes e
             inovadoras.
@@ -60,7 +63,7 @@ export function Resume() {
             />
           </Link>
         </div>
-        <div className="col-span-1 grid gap-y-6 lg:ml-auto pr-0 lg:pr-12 xl:pr-16">
+        <div className="col-span-1 grid gap-y-2 lg:gap-y-6 lg:ml-auto pr-0 lg:pr-12 xl:pr-16">
           {RESUME_ITEMS.map((props, idx) => (
             <ResumeItem key={idx} {...props} />
           ))}
