@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { Input, Button, Typography } from "@material-tailwind/react";
+import { Button, Typography } from "@material-tailwind/react";
+import Link from "next/link";
 
 function Hero() {
   return (
@@ -27,15 +28,11 @@ function Hero() {
           </Typography>
           <div className="grid">
             <div className="mb-2 flex w-full flex-col gap-4 md:w-10/12 md:flex-row">
-              {/* @ts-ignore */}
-              <Input color="gray" label="Seu melhor e-mail" size="lg" />
-              <Button
-                color="gray"
-                className="w-full px-4 md:w-[12rem]"
-                placeholder={""}
-              >
-                Orçamento
-              </Button>
+              <Link placeholder={""} href={"#contact"}>
+                <Button color="gray" className="w-full px-4 md:w-[12rem]">
+                  Orçamento
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

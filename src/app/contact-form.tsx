@@ -85,7 +85,7 @@ export function ContactForm() {
   };
 
   return (
-    <section className="px-8 py-16">
+    <section className="px-8 py-16" id="contact">
       <div className="container mx-auto mb-20 text-center">
         <Typography
           variant="h1"
