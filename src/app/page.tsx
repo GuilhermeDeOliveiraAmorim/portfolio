@@ -1,5 +1,6 @@
 import { Navbar, Footer } from "@/components";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 import Hero from "./hero";
 import Skills from "./skills";
@@ -18,6 +19,7 @@ export default function Portfolio() {
       <ContactForm />
       <Footer />
       <SpeedInsights />
+      <Analytics />
     </>
   );
 }
