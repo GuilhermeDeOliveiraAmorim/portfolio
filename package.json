@@ -5,6 +5,9 @@
   "author": "Guilherme Amorim",
   "license": "See license in https://www.creative-tim.com/license",
   "homepage": "https://www.guilhermeamorim.com",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
