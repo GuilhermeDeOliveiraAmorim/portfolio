@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/next-script-for-ga */
 import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
@@ -10,9 +9,22 @@ const roboto = Roboto({
   display: "swap",
 });
 
+const title = "Guilherme Amorim — Desenvolvedor full-stack";
+const description =
+  "Desenvolvedor full-stack com fundamento em arquitetura de software. APIs e produtos web em TypeScript (NestJS, Next.js) e Go, com DDD, Clean Architecture, testes automatizados e entrega contínua.";
+
 export const metadata: Metadata = {
-  title: "Guilherme Amorim",
-  description: "Profissional em desenvolvimento web e APIs",
+  metadataBase: new URL("https://www.guilhermeamorim.com"),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: "https://www.guilhermeamorim.com",
+    siteName: "Guilherme Amorim",
+    locale: "pt_BR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -21,13 +33,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
-        <script
-          defer
-          data-site="YOUR_DOMAIN_HERE"
-          src="https://api.nepcha.com/js/nepcha-analytics.js"
-        ></script>
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
       </head>
       <body className={roboto.className}>

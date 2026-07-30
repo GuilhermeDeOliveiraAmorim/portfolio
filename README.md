@@ -1,94 +1,72 @@
-# [NextJS Tailwind Portfolio Page](http://demos.creative-tim.com/nextjs-tailwind-portfolio-page?ref=readme-ntpp) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https://www.creative-tim.com/product/nextjs-tailwind-portfolio-page&text=Check%20Material%20Tailwind%202%20Template%20made%20by%20@CreativeTim%20#webdesign%20#template%20#materialdesign%20#react%20https://www.creative-tim.com/product/nextjs-tailwind-portfolio-page)
+# Portfólio — Guilherme Amorim
 
-![version](https://img.shields.io/badge/version-1.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/nextjs-tailwind-portfolio-page.svg)](https://github.com/creativetimofficial/nextjs-tailwind-portfolio-page/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/nextjs-tailwind-portfolio-page.svg)](https://github.com/creativetimofficial/nextjs-tailwind-portfolio-page/issues?q=is%3Aissue+is%3Aclosed)
+Site pessoal em [www.guilhermeamorim.com](https://www.guilhermeamorim.com), com apresentação
+profissional, competências, projetos e formulário de contato.
 
-![Image](https://s3.amazonaws.com/creativetim_bucket/products/739/original/material-tailwind-react-portfolio-template-thumbnail.jpg?1697615979)
+## Stack
 
-Introducing Tailwind Portfolio Page, a versatile and stylish portfolio template built on the foundation of Tailwind CSS and Material Tailwind.
+- [Next.js](https://nextjs.org/) (App Router)
+- TypeScript
+- [Tailwind CSS](https://tailwindcss.com/) + [Material Tailwind](https://www.material-tailwind.com/)
+- [Postmark](https://postmarkapp.com/) para o envio do formulário de contato
+- Deploy na [Vercel](https://vercel.com/), com Analytics e Speed Insights
 
-Are you in search of a professionally designed and highly customizable portfolio web page template tailored for artists, designers, photographers, and creative professionals to showcase their work and establish a strong online presence? Look no further! We are excited to present to you our Free Portfolio Page Template, meticulously crafted to cater to the needs of portfolio website developers like you.
+## Requisitos
 
-This template, designed with Tailwind CSS and Material Tailwind, offers effortless customization to align perfectly with your website's unique branding. The free portfolio template boasts essential features such as hero, logo, testimonial, and features sections.
+- Node.js >= 18
+- pnpm
 
-**Documentation built by Developers**
+## Instalação
 
-Each element is well presented in very complex documentation.
+```bash
+pnpm install
+```
 
-You can read more about the [documentation here](https://www.material-tailwind.com/docs/react/installation).
+## Desenvolvimento
 
-**HELPFUL LINKS**
+```bash
+pnpm dev     # http://localhost:3000
+```
 
-- View [Github Repository](https://github.com/creativetimofficial/nextjs-tailwind-portfolio-page)
-- Check [FAQ Page](https://www.creative-tim.com/faq)
+Crie um `.env` na raiz com o token do Postmark, usado pela rota `src/app/api/sendmail/route.ts`:
 
-## [Demo](https://creative-tim.com/product/nextjs-tailwind-portfolio-page)
+```bash
+POSTMARK_SERVER_API_TOKEN=...
+```
 
-## Quick start
+Sem essa variável, o formulário de contato não envia — o restante do site funciona normalmente.
 
-Quick start options:
+## Scripts
 
-- Download from [Creative Tim](https://www.creative-tim.com/product/nextjs-tailwind-portfolio-page?ref=readme-ntpp).
+```bash
+pnpm dev      # servidor de desenvolvimento
+pnpm build    # build de produção
+pnpm start    # serve o build
+pnpm lint     # eslint
+```
 
-## Terminal Commands
+## Estrutura
 
-1. Download and Install NodeJs LTS version from [NodeJs Official Page](https://nodejs.org/en/download/).
-2. Navigate to the root ./ directory of the product and run `npm install` to install our local dependencies.
+```
+src/
+├── app/
+│   ├── page.tsx              # composição da home
+│   ├── layout.tsx            # metadata, fonte e layout raiz
+│   ├── hero.tsx              # apresentação
+│   ├── skills.tsx            # competências
+│   ├── projects.tsx          # projetos
+│   ├── resume.tsx            # formação (resumo)
+│   ├── contact-form.tsx      # formulário de contato
+│   ├── resume-details/       # página de detalhes da formação
+│   └── api/sendmail/         # rota de envio via Postmark
+├── components/               # navbar, footer, cards
+└── data/
+    └── resume.ts             # fonte única dos itens de formação
+```
 
-## Documentation
+## Créditos
 
-The documentation for the Material Dashboard is hosted at our [website](https://www.material-tailwind.com/docs/react/installation?ref=readme-ntpp).
-
-## Browser Support
-
-At present, we officially aim to support the last two versions of the following browsers:
-
-<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
-
-## Resources
-
-- [Live Preview](https://demos.creative-tim.com/nextjs-tailwind-portfolio-page?ref=readme-ntpp)
-- [Download Page](https://www.creative-tim.com/product/nextjs-tailwind-portfolio-page?ref=readme-ntpp)
-- Documentation is [here](https://www.material-tailwind.com/docs/react/installation?ref=readme-ntpp)
-- [License Agreement](https://www.creative-tim.com/license?ref=readme-ntpp)
-- [Support](https://www.creative-tim.com/contact-us?ref=readme-ntpp)
-- Issues: [Github Issues Page](https://github.com/creativetimofficial/nextjs-tailwind-portfolio-page/issues)
-- [Nepcha Analytics](https://nepcha.com?ref=readme) - Analytics tool for your website
-
-## Reporting Issues
-
-We use GitHub Issues as the official bug tracker for the Nextjs + Tailwind Portfolio Page. Here are some advices for our users that want to report an issue:
-
-1. Make sure that you are using the latest version of the Nextjs + Tailwind Portfolio Page. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/product/nextjs-tailwind-portfolio-page?ref=readme-ntpp).
-2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
-3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
-
-## Technical Support or Questions
-
-If you have questions or need help integrating the product please [contact us](https://www.creative-tim.com/contact-us?ref=readme-ntpp) instead of opening an issue.
-
-## Licensing
-
-- Copyright 2023 [Creative Tim](https://www.creative-tim.com?ref=readme-ntpp)
-- Creative Tim [license](https://www.creative-tim.com/license?ref=readme-ntpp)
-
-## Useful Links
-
-- [More products](https://www.creative-tim.com/templates?ref=readme-ntpp) from Creative Tim
-
-- [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
-
-- [Freebies](https://www.creative-tim.com/bootstrap-themes/free?ref=readme-ntpp) from Creative Tim
-
-- [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=readme-ntpp) (earn money)
-
-##### Social Media
-
-Twitter: <https://twitter.com/CreativeTim>
-
-Facebook: <https://www.facebook.com/CreativeTim>
-
-Dribbble: <https://dribbble.com/creativetim>
-
-Google+: <https://plus.google.com/+CreativetimPage>
-
-Instagram: <https://instagram.com/creativetimofficial>
+Construído a partir do template
+[NextJS Tailwind Portfolio Page](https://www.creative-tim.com/product/nextjs-tailwind-portfolio-page)
+da [Creative Tim](https://www.creative-tim.com/), sob a
+[licença original](https://www.creative-tim.com/license) — ver [`LICENSE.md`](LICENSE.md).

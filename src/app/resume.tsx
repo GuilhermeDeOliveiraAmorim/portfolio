@@ -1,39 +1,10 @@
 "use client";
 
-import { Typography, Button } from "@material-tailwind/react";
-import {
-  ChartBarIcon,
-  PuzzlePieceIcon,
-  CursorArrowRaysIcon,
-  ArrowRightIcon,
-} from "@heroicons/react/24/solid";
+import { Typography } from "@material-tailwind/react";
+import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { ResumeItem } from "@/components";
+import { RESUME_ITEMS } from "@/data/resume";
 import Link from "next/link";
-
-const RESUME_ITEMS = [
-  {
-    icon: ChartBarIcon,
-    children: "Pós-Gradução em Desenvolvimento Avançado em Go",
-    description: "Jan (2024) - atual",
-  },
-  {
-    icon: PuzzlePieceIcon,
-    children:
-      "Pós-graduação Lato Sensu - MBA, Desenvolvimento Full Stack TypeScript",
-    description: "Mar (2022) - Abr (2023)",
-  },
-  {
-    icon: CursorArrowRaysIcon,
-    children:
-      "Analista de Teste, Engenharia de Software, com formação em Análise de Testes",
-    description: "Jan (2013) - Dez (2013)",
-  },
-  {
-    icon: CursorArrowRaysIcon,
-    children: "Bacharelado em Ciência da Computação",
-    description: "Jul (2006) - Dez (2013)",
-  },
-];
 
 export function Resume() {
   return (
@@ -41,15 +12,16 @@ export function Resume() {
       <div className="container mx-auto grid w-full grid-cols-1 items-center gap-16 lg:grid-cols-2">
         <div className="col-span-1">
           <Typography variant="h2" color="blue-gray" placeholder={""}>
-            Currículo
+            Formação
           </Typography>
           <Typography
             className="mb-4 mt-3 lg:w-9/12 font-normal !text-gray-500"
             placeholder={""}
           >
-            Com mais de 10 anos de experiência em desenvolvimento web e 4 anos
-            em backend, trago expertise em criar soluções digitais eficientes e
-            inovadoras.
+            Ciência da Computação como base, especialização em Go e em
+            desenvolvimento full stack, e prática contínua em arquitetura de
+            software — hoje também como monitor de Engenharia de Software no MBA
+            USP/Esalq.
           </Typography>
           <Link
             href={"/resume-details"}
