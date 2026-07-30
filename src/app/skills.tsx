@@ -2,37 +2,37 @@
 
 import { Typography } from "@material-tailwind/react";
 import {
-  FaArrowsAlt,
-  FaSearch,
-  FaPaintBrush,
-  FaRegListAlt,
+  FaLayerGroup,
+  FaServer,
+  FaLaptopCode,
+  FaVial,
 } from "react-icons/fa";
 import { SkillCard } from "@/components";
 
 const SKILLS = [
   {
-    icon: FaPaintBrush,
-    title: "Desenvolvimento Web Frontend",
+    icon: FaLayerGroup,
+    title: "Arquitetura de software",
     children:
-      "Criar experiências web bonitas e funcionais é a minha especialidade. Utilizando tecnologias recentes e as melhores práticas, eu projeto e construo websites eficientes.",
+      "DDD e Clean Architecture na prática: domínio isolado de infraestrutura, casos de uso explícitos e dependências apontando para dentro. Organizo projetos em camadas e em monorepo quando o produto pede.",
   },
   {
-    icon: FaSearch,
-    title: "Otimização para Buscadores (SEO)",
+    icon: FaServer,
+    title: "Back-end e APIs",
     children:
-      "Otimização precisa de palavras-chave, tags meta e conteúdo para aumentar a visibilidade nos motores de busca, melhorando a posição nos resultados e a relevância online.",
+      "APIs REST em NestJS e Go, com autenticação JWT, controle de acesso por papéis, rate limiting e integrações de pagamento e e-mail. Persistência com Drizzle, Prisma ou GORM sobre PostgreSQL e MySQL.",
   },
   {
-    icon: FaArrowsAlt,
-    title: "Design Responsivo",
+    icon: FaLaptopCode,
+    title: "Front-end",
     children:
-      "Criação de layouts adaptáveis para uma experiência consistente em todos os dispositivos, usando técnicas avançadas de design e desenvolvimento.",
+      "Interfaces em Next.js com App Router, React e Tailwind CSS. Renderização no servidor, sessão via cookie e layouts que funcionam de desktop a mobile.",
   },
   {
-    icon: FaRegListAlt,
-    title: "APIs Restful",
+    icon: FaVial,
+    title: "Testes e entrega contínua",
     children:
-      "Desenvolvimento de APIs eficientes e escaláveis, seguindo os princípios RESTful. Implemento endpoints claros e bem documentados para facilitar a comunicação.",
+      "Testes unitários, de integração e end-to-end com Jest, Vitest e Playwright. Pipelines no GitHub Actions com lint, typecheck e testes antes do deploy — em Docker, Fly.io e Vercel.",
   },
 ];
 
@@ -45,7 +45,7 @@ export function Skills() {
           className="mb-2 font-bold uppercase"
           placeholder={""}
         >
-          Skills
+          Competências
         </Typography>
         <Typography
           variant="h1"
@@ -53,16 +53,15 @@ export function Skills() {
           className="mb-4"
           placeholder={""}
         >
-          O que posso fazer por você
+          Como eu trabalho
         </Typography>
         <Typography
           variant="lead"
           className="mx-auto w-full !text-gray-500 lg:w-10/12"
           placeholder={""}
         >
-          Transformando linhas de código em experiências digitais memoráveis,
-          com expertise em desenvolvimento web, backend robusto e paixão pela
-          inovação tecnológica.
+          Da modelagem do domínio ao deploy: arquitetura em camadas, APIs
+          testadas e entrega automatizada.
         </Typography>
       </div>
       <div className="container mx-auto grid grid-cols-1 gap-y-10 md:grid-cols-2 lg:grid-cols-2">
