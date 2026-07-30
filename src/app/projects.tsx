@@ -2,56 +2,45 @@
 
 import { ProjectCard } from "@/components";
 import { Typography } from "@material-tailwind/react";
+import Link from "next/link";
 
 const PROJECTS = [
   {
-    img: "/image/lucigreyceteles.png",
-    title: "Lucigreyce Teles Advocacia",
-    desc: "Seu escritório virtual, onde a expertise jurídica encontra a excelência digital. Websites construídos com WordPress, otimizados para a área jurídica, garantindo uma presença online forte e profissional.",
-    externalLink: "https://lucigreyceteles.adv.br/",
-  },
-  {
-    img: "/image/lucigreyceteles-atendimento.png",
-    title: "Atendimento - Lucigreyce Teles",
-    desc: "Atendimento jurídico personalizado e eficiente. Sua advocacia em boas mãos, em uma landing page construída com WordPress, facilitando o gerenciamento.",
-    externalLink: "https://atendimento.lucigreyceteles.adv.br/",
-  },
-  {
-    img: "/image/frank-deering.png",
-    title: "Frank Deering - Advocacia e Consultoria",
-    desc: "Conheça nosso site desenvolvido com WordPress, dedicado à advocacia com excelência, trazendo informações precisas e acessíveis para você.",
-    externalLink: "https://frankdeering.adv.br/",
-  },
-  {
-    img: "/image/cristina-vieira.png",
-    title: "Cristina Vieira - Advocacia e Consultoria",
-    desc: "Um site construído em HTML e CSS com foco na advocacia, seguindo boas práticas de SEO para destacar a excelência de Cristina Vieira no mundo jurídico.",
-    externalLink: "https://cristinavieira.com.br/",
-  },
-  {
-    img: "/image/deso.png",
-    title: "Companhia de Saneamento de Sergipe",
-    desc: "Site em HTML e CSS, construído com boas práticas de SEO, backend PHP, integrado ao banco de dados Postgres.",
-    externalLink: "https://www.deso-se.com.br/",
+    img: "/image/imovila.png",
+    title: "Imovila — SaaS em produção",
+    desc: "Portal imobiliário que conecta corretores a quem procura comprar, vender ou alugar. Monorepo pnpm + Turborepo: API NestJS com Drizzle sobre PostgreSQL, front Next.js 15 com React 19, assinaturas via Stripe, autenticação JWT com papéis, e-mail transacional e jobs agendados. Testado com Jest, Vitest e Playwright em seis perfis de dispositivo, com CI e deploy contínuo. Código privado.",
+    externalLink: "https://www.imovila.com.br/",
   },
   {
     img: "/image/go-nextjs.png",
-    title: "You Choose",
-    desc: "Uma aplicação com backend em Go e Clean Architecture, combinado com um frontend em Next.js seguindo também os princípios da Clean Architecture.",
-    externalLink: "https://github.com/GuilhermeDeOliveiraAmorim/youchoose",
+    title: "Expense Tracker",
+    desc: "API em Go seguindo Clean Architecture com camadas explícitas — domínio e ports, casos de uso, controllers e repositórios. Gin, GORM, PostgreSQL, autenticação JWT e Docker.",
+    externalLink: "https://github.com/GuilhermeDeOliveiraAmorim/expense_tracker",
+  },
+  {
+    img: "/image/go-nextjs.png",
+    title: "Sistema de Temperatura por CEP",
+    desc: "Dois serviços em Go se comunicando: um valida o CEP, o outro resolve a localização e retorna a temperatura. Instrumentados com OpenTelemetry e Zipkin para tracing distribuído, orquestrados por Docker Compose.",
+    externalLink: "https://github.com/GuilhermeDeOliveiraAmorim/sistema-temp-cep",
+  },
+  {
+    img: "/image/go-nextjs.png",
+    title: "Investment Manager",
+    desc: "Gestão de ativos e clientes com arquitetura desacoplada: front em Next.js, back em Node.js com Express e Prisma, banco MySQL e ambiente completo em Docker Compose, com documentação interativa da API.",
+    externalLink:
+      "https://github.com/GuilhermeDeOliveiraAmorim/investment-manager",
   },
   {
     img: "/image/go-nextjs.png",
     title: "FacilitaProf",
-    desc: "Uma API construída em Go, seguindo os princípios da Clean Architecture para garantir a simplicidade e eficiência em cada requisição.",
-    externalLink:
-      "https://github.com/GuilhermeDeOliveiraAmorim/facilitaprof-go",
+    desc: "Sistema de geração de provas para professores. Back-end em TypeScript seguindo Clean Architecture com Prisma ORM, front-end em Next.js.",
+    externalLink: "https://github.com/GuilhermeDeOliveiraAmorim/facilita-prof",
   },
 ];
 
 export function Projects() {
   return (
-    <section className="py-28 px-8">
+    <section className="py-28 px-8" id="projects">
       <div className="container mx-auto mb-20 text-center">
         <Typography
           variant="h2"
@@ -66,15 +55,30 @@ export function Projects() {
           className="mx-auto w-full px-4 font-normal !text-gray-500 lg:w-6/12"
           placeholder={""}
         >
-          Meus projetos web são desenvolvidos com design responsivo e otimização
-          de SEO, enquanto minhas APIs seguem os princípios da Clean
-          Architecture, garantindo eficiência e qualidade em cada detalhe.
+          Produto em produção e projetos de arquitetura em Go e TypeScript —
+          domínio em camadas, testes automatizados e entrega contínua.
         </Typography>
       </div>
-      <div className="container mx-auto grid grid-cols-1 gap-x-10 gap-y-20 md:grid-cols-2 xl:grid-cols-4">
+      <div className="container mx-auto grid grid-cols-1 gap-x-10 gap-y-20 md:grid-cols-2 xl:grid-cols-3">
         {PROJECTS.map((props, idx) => (
           <ProjectCard key={idx} {...props} />
         ))}
+      </div>
+      <div className="container mx-auto mt-20 text-center">
+        <Typography
+          className="mx-auto w-full px-4 font-normal !text-gray-500 lg:w-8/12"
+          placeholder={""}
+        >
+          Antes disso, entreguei sites institucionais para clientes, como o da{" "}
+          <Link
+            href="https://lucigreyceteles.adv.br/"
+            target="_blank"
+            className="font-medium text-gray-900 underline"
+          >
+            Lucigreyce Teles Advocacia
+          </Link>{" "}
+          — WordPress, com foco em SEO e presença digital.
+        </Typography>
       </div>
     </section>
   );
