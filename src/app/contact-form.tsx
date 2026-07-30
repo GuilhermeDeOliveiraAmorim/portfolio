@@ -143,7 +143,7 @@ export function ContactForm() {
                   className="mb-2"
                   placeholder={""}
                 >
-                  +55 (79) 9 9114 5680
+                  +55 (82) 9 9976 7761
                 </Typography>
               </div>
               <div className="flex my-2 gap-5">
