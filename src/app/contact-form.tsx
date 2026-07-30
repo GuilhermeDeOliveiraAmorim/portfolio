@@ -11,6 +11,7 @@ import {
   ButtonGroup,
 } from "@material-tailwind/react";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useState } from "react";
 import { FormEvent } from "react";
 import { Email } from "./api/sendmail/route";
@@ -31,7 +32,7 @@ export function ContactForm() {
     var error = "";
 
     if (firstName === "") {
-      error = error + "preciso do seu primeito nome; ";
+      error = error + "preciso do seu primeiro nome; ";
     }
 
     if (lastName === "") {
@@ -43,11 +44,11 @@ export function ContactForm() {
     }
 
     if (job === "") {
-      error = error + "preciso que você informe um serviço; ";
+      error = error + "preciso que você informe o motivo do contato; ";
     }
 
     if (message === "") {
-      error = error + "poderia nos contar um pouco mais sobre o projeto?";
+      error = error + "poderia me contar um pouco mais?";
     }
 
     if (error !== "") {
@@ -79,8 +80,11 @@ export function ContactForm() {
       setTimeout(() => {
         setSuccess("");
       }, 5000);
-    } catch (error) {
-      alert("NOK");
+    } catch (err) {
+      setSuccess("");
+      setError(
+        "Não consegui enviar sua mensagem agora. Tente novamente ou me escreva em contato@guilhermeamorim.com."
+      );
     }
   };
 
@@ -100,8 +104,8 @@ export function ContactForm() {
           className="mx-auto w-full lg:w-5/12 !text-gray-500"
           placeholder={""}
         >
-          Pronto para começar? Sinta-se à vontade para entrar em contato através
-          do formulário.
+          Aberto a oportunidades e a conversas sobre projetos. Me escreva pelo
+          formulário ou pelos canais ao lado.
         </Typography>
       </div>
       <div>
@@ -128,8 +132,8 @@ export function ContactForm() {
                 className="mx-auto mb-8 text-base !text-gray-500"
                 placeholder={""}
               >
-                Preencha o formulário e entrarei em contato com você em até 24
-                horas.
+                Respondo o quanto antes. Se preferir, fale comigo direto pelo
+                e-mail ou pelo LinkedIn.
               </Typography>
               <div className="flex gap-5">
                 <PhoneIcon className="h-6 w-6 text-white" />
@@ -143,20 +147,32 @@ export function ContactForm() {
                 </Typography>
               </div>
               <div className="flex my-2 gap-5">
+                <EnvelopeIcon className="h-6 w-6 text-white" />
                 <Typography color="white" className="mb-2" placeholder={""}>
                   contato@guilhermeamorim.com
                 </Typography>
               </div>
               <div className="flex items-center gap-5">
-                <IconButton variant="text" color="white" placeholder={""}>
-                  <i className="fa-brands fa-facebook text-lg" />
-                </IconButton>
-                <IconButton variant="text" color="white" placeholder={""}>
-                  <i className="fa-brands fa-instagram text-lg" />
-                </IconButton>
-                <IconButton variant="text" color="white" placeholder={""}>
-                  <i className="fa-brands fa-github text-lg" />
-                </IconButton>
+                <a
+                  href="https://github.com/GuilhermeDeOliveiraAmorim"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                  <IconButton variant="text" color="white" placeholder={""}>
+                    <FaGithub className="h-5 w-5" />
+                  </IconButton>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/guideoliveiraamorim/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <IconButton variant="text" color="white" placeholder={""}>
+                    <FaLinkedin className="h-5 w-5" />
+                  </IconButton>
+                </a>
               </div>
             </div>
             <div className="w-full mt-8 md:mt-0 md:px-10 col-span-4 h-full p-5">
@@ -210,14 +226,12 @@ export function ContactForm() {
                   className="!text-blue-gray-500 text-sm mb-2"
                   placeholder={""}
                 >
-                  No que você está interessado? <b>{job}</b>
+                  Qual o motivo do contato? <b>{job}</b>
                 </Typography>
                 <div className="-ml-3 mb-14 ">
                   <ButtonGroup>
-                    <Button onClick={() => setJob("Web Site")}>Web Site</Button>
-                    <Button onClick={() => setJob("Landing Page")}>
-                      Landing Page
-                    </Button>
+                    <Button onClick={() => setJob("Vaga")}>Vaga</Button>
+                    <Button onClick={() => setJob("Projeto")}>Projeto</Button>
                     <Button onClick={() => setJob("Outro")}>Outro</Button>
                   </ButtonGroup>
                 </div>
