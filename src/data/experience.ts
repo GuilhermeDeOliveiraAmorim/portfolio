@@ -20,7 +20,7 @@ export const EXPERIENCE_ITEMS: ExperienceItem[] = [
     summary:
       "Plataforma de streaming para Smart TVs (Samsung Tizen e Android TV). Respondo pela arquitetura e evolução do ecossistema de APIs que sustenta o player multi-sistema operacional.",
     highlights: [
-      "Liderança técnica de uma equipe de seis pessoas — três de frontend, duas de back-end e uma de DevOps",
+      "Liderança técnica de uma equipe de seis pessoas: três de frontend, duas de back-end e uma de DevOps",
       "Definição e evolução da arquitetura de três APIs independentes em Go",
       "Modelagem de domínio e aplicação de Clean Architecture",
       "Serviço de enriquecimento automático de metadados integrado ao TMDB",
@@ -65,10 +65,15 @@ function label(value: string) {
 }
 
 /**
- * Monta "nov 2024 — atual · 1 ano e 10 meses".
+ * Monta "desde nov 2024 · 1 ano e 10 meses" para o cargo atual, ou
+ * "de mar 2022 até jun 2023 · 1 ano e 3 meses" para um já encerrado.
  *
  * A duração é calculada em tempo de render, não escrita à mão, para não
  * envelhecer sozinha no cargo atual.
+ *
+ * O intervalo é escrito por extenso, sem travessão: leitores de tela
+ * pronunciam o travessão de forma inconsistente, e "nov 2024 atual" (o que
+ * sobraria ao apenas remover o caractere) não se lê.
  */
 export function formatPeriod(item: ExperienceItem, now = new Date()) {
   const from = parse(item.start);
@@ -86,9 +91,9 @@ export function formatPeriod(item: ExperienceItem, now = new Date()) {
   if (years > 0) parts.push(`${years} ${years === 1 ? "ano" : "anos"}`);
   if (months > 0) parts.push(`${months} ${months === 1 ? "mês" : "meses"}`);
 
-  const range = `${label(item.start)} — ${
-    item.end ? label(item.end) : "atual"
-  }`;
+  const range = item.end
+    ? `de ${label(item.start)} até ${label(item.end)}`
+    : `desde ${label(item.start)}`;
 
   return parts.length > 0 ? `${range} · ${parts.join(" e ")}` : range;
 }
