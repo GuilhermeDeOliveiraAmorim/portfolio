@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 import Hero from "./hero";
 import Skills from "./skills";
+import Experience from "./experience";
 import Projects from "./projects";
 import Resume from "./resume";
 import ContactForm from "./contact-form";
@@ -14,6 +15,7 @@ export default function Portfolio() {
       <Navbar />
       <Hero />
       <Skills />
+      <Experience />
       <Projects />
       <Resume />
       <ContactForm />
