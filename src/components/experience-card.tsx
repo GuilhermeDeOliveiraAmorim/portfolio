@@ -4,12 +4,8 @@ import { formatPeriod, type ExperienceItem } from "@/data/experience";
 
 export function ExperienceCard({ item }: { item: ExperienceItem }) {
   return (
-    <Card
-      shadow={false}
-      className="border border-gray-200"
-      placeholder={""}
-    >
-      <CardBody placeholder={""}>
+    <Card color="transparent" shadow={false} placeholder={""}>
+      <CardBody className="p-0" placeholder={""}>
         <div className="mb-4 flex items-start gap-4">
           <Card
             color="gray"
