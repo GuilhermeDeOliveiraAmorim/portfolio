@@ -36,20 +36,52 @@ export default function ResumeDetails() {
               internacional).
             </Typography>
             <Typography
-              className="mb-4 mt-3 w-9/12 font-normal !text-gray-500"
+              className="mb-2 mt-3 w-9/12 font-normal !text-gray-500"
               placeholder={""}
             >
-              <b>Outras formações</b>: – MBA em Desenvolvimento Avançado em Go
-              pela Full Cycle (2024); – MBA em Desenvolvimento Full Stack com
-              JavaScript e TypeScript pelo Instituto de Gestão e Tecnologia da
-              Informação (2023); – Curso Sequencial de Formação Complementar da
-              Universidade Federal de Pernambuco em parceria com a Motorola
-              Mobility. Desenvolvimento de habilidades em Java e Análise de
-              Testes de Software (2013); – Mestrado em Ciência da Computação
-              (Universidade Federal de Sergipe) com atuação nas áreas de
-              Computação Afetiva e Interação Homem-Máquina, grande área
-              Inteligência Artificial (2014 - não finalizado).
+              <b>Outras formações</b>:
             </Typography>
+            <ul className="mb-4 w-9/12 list-disc space-y-1 pl-5">
+              <li>
+                <Typography
+                  className="font-normal !text-gray-500"
+                  placeholder={""}
+                >
+                  MBA em Desenvolvimento Avançado em Go pela Full Cycle (2024)
+                </Typography>
+              </li>
+              <li>
+                <Typography
+                  className="font-normal !text-gray-500"
+                  placeholder={""}
+                >
+                  MBA em Desenvolvimento Full Stack com JavaScript e TypeScript
+                  pelo Instituto de Gestão e Tecnologia da Informação (2023)
+                </Typography>
+              </li>
+              <li>
+                <Typography
+                  className="font-normal !text-gray-500"
+                  placeholder={""}
+                >
+                  Curso Sequencial de Formação Complementar da Universidade
+                  Federal de Pernambuco em parceria com a Motorola Mobility,
+                  com desenvolvimento de habilidades em Java e Análise de Testes
+                  de Software (2013)
+                </Typography>
+              </li>
+              <li>
+                <Typography
+                  className="font-normal !text-gray-500"
+                  placeholder={""}
+                >
+                  Mestrado em Ciência da Computação na Universidade Federal de
+                  Sergipe, com atuação em Computação Afetiva e Interação
+                  Homem-Máquina, na grande área de Inteligência Artificial
+                  (2014, não finalizado)
+                </Typography>
+              </li>
+            </ul>
             <Typography
               className="mb-4 mt-3 w-9/12 font-normal !text-gray-500"
               placeholder={""}

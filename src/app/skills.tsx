@@ -32,7 +32,7 @@ const SKILLS = [
     icon: FaVial,
     title: "Testes e entrega contínua",
     children:
-      "Testes unitários, de integração e end-to-end com Jest, Vitest e Playwright. Pipelines no GitHub Actions com lint, typecheck e testes antes do deploy — em Docker, Fly.io e Vercel.",
+      "Testes unitários, de integração e end-to-end com Jest, Vitest e Playwright. Pipelines no GitHub Actions com lint, typecheck e testes antes do deploy em Docker, Fly.io e Vercel.",
   },
 ];
 

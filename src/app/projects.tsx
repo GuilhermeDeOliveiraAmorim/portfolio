@@ -2,39 +2,22 @@
 
 import { ProjectCard } from "@/components";
 import { Typography } from "@material-tailwind/react";
-import Link from "next/link";
 
 const PROJECTS = [
   {
-    img: "/image/imovila.png",
-    title: "Imovila — SaaS em produção",
-    desc: "Portal imobiliário que conecta corretores a quem procura comprar, vender ou alugar. Monorepo pnpm + Turborepo: API NestJS com Drizzle sobre PostgreSQL, front Next.js 15 com React 19, assinaturas via Stripe, autenticação JWT com papéis, e-mail transacional e jobs agendados. Testado com Jest, Vitest e Playwright em seis perfis de dispositivo, com CI e deploy contínuo. Código privado.",
+    title: "Imovila: SaaS em produção",
+    desc: "Portal imobiliário que conecta corretores a quem procura comprar, vender ou alugar. Monorepo pnpm e Turborepo, com API NestJS sobre Drizzle e PostgreSQL, front Next.js 15 com React 19, assinaturas via Stripe, autenticação JWT com papéis, e-mail transacional e jobs agendados. Testado com Jest, Vitest e Playwright em seis perfis de dispositivo, com CI e deploy contínuo.",
     externalLink: "https://www.imovila.com.br/",
   },
   {
-    img: "/image/go-nextjs.png",
-    title: "Expense Tracker",
-    desc: "API em Go seguindo Clean Architecture com camadas explícitas — domínio e ports, casos de uso, controllers e repositórios. Gin, GORM, PostgreSQL, autenticação JWT e Docker.",
-    externalLink: "https://github.com/GuilhermeDeOliveiraAmorim/expense_tracker",
+    title: "Cartola em Dados",
+    desc: "Plataforma de dados e inteligência para o Cartola FC. Faz ingestão histórica e corrente pela API oficial e expõe uma API HTTP de consulta escrita em Go, seguindo Clean Architecture e DDD com o domínio isolado da infraestrutura.",
+    externalLink: "https://cartolaemdados.com.br/",
   },
   {
-    img: "/image/go-nextjs.png",
-    title: "Sistema de Temperatura por CEP",
-    desc: "Dois serviços em Go se comunicando: um valida o CEP, o outro resolve a localização e retorna a temperatura. Instrumentados com OpenTelemetry e Zipkin para tracing distribuído, orquestrados por Docker Compose.",
-    externalLink: "https://github.com/GuilhermeDeOliveiraAmorim/sistema-temp-cep",
-  },
-  {
-    img: "/image/go-nextjs.png",
-    title: "Investment Manager",
-    desc: "Gestão de ativos e clientes com arquitetura desacoplada: front em Next.js, back em Node.js com Express e Prisma, banco MySQL e ambiente completo em Docker Compose, com documentação interativa da API.",
-    externalLink:
-      "https://github.com/GuilhermeDeOliveiraAmorim/investment-manager",
-  },
-  {
-    img: "/image/go-nextjs.png",
-    title: "FacilitaProf",
-    desc: "Sistema de geração de provas para professores. Back-end em TypeScript seguindo Clean Architecture com Prisma ORM, front-end em Next.js.",
-    externalLink: "https://github.com/GuilhermeDeOliveiraAmorim/facilita-prof",
+    title: "You Choose",
+    desc: "Ranking construído por votação. O usuário monta listas de filmes ou marcas e os itens aparecem em confrontos par a par: a cada rodada se escolhe um vencedor, e a ordem final emerge do acumulado dos votos. API em Go com Clean Architecture, autenticação JWT, voto idempotente por confronto, erros em RFC 7807 e documentação Swagger.",
+    externalLink: "https://uchoose.net/",
   },
 ];
 
@@ -55,30 +38,14 @@ export function Projects() {
           className="mx-auto w-full px-4 font-normal !text-gray-500 lg:w-6/12"
           placeholder={""}
         >
-          Produto em produção e projetos de arquitetura em Go e TypeScript —
-          domínio em camadas, testes automatizados e entrega contínua.
+          Produtos em produção, construídos em Go e TypeScript, com domínio em
+          camadas, testes automatizados e entrega contínua.
         </Typography>
       </div>
-      <div className="container mx-auto grid grid-cols-1 gap-x-10 gap-y-20 md:grid-cols-2 xl:grid-cols-3">
+      <div className="container mx-auto grid grid-cols-1 gap-x-10 gap-y-16 lg:grid-cols-3">
         {PROJECTS.map((props, idx) => (
           <ProjectCard key={idx} {...props} />
         ))}
-      </div>
-      <div className="container mx-auto mt-20 text-center">
-        <Typography
-          className="mx-auto w-full px-4 font-normal !text-gray-500 lg:w-8/12"
-          placeholder={""}
-        >
-          Antes disso, entreguei sites institucionais para clientes, como o da{" "}
-          <Link
-            href="https://lucigreyceteles.adv.br/"
-            target="_blank"
-            className="font-medium text-gray-900 underline"
-          >
-            Lucigreyce Teles Advocacia
-          </Link>{" "}
-          — WordPress, com foco em SEO e presença digital.
-        </Typography>
       </div>
     </section>
   );

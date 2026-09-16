@@ -9,7 +9,12 @@ import Link from "next/link";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 interface ProjectCardProps {
-  img: string;
+  /**
+   * Opcional. Sem captura de tela do projeto, o card abre direto no título,
+   * em vez de reservar um slot vazio ou repetir uma arte genérica entre
+   * projetos diferentes.
+   */
+  img?: string;
   title: string;
   desc: string;
   externalLink: string;
@@ -23,19 +28,26 @@ export function ProjectCard({
 }: ProjectCardProps) {
   return (
     <Card color="transparent" shadow={false} placeholder={""}>
-      <CardHeader floated={false} className="mx-0 mt-0 mb-6 h-48" placeholder={""}>
-        <Image
-          src={img}
-          alt={title}
-          width={768}
-          height={768}
-          className="h-full w-full object-cover"
-        />
-      </CardHeader>
+      {img ? (
+        <CardHeader
+          floated={false}
+          className="mx-0 mt-0 mb-6 h-48"
+          placeholder={""}
+        >
+          <Image
+            src={img}
+            alt={title}
+            width={768}
+            height={768}
+            className="h-full w-full object-cover"
+          />
+        </CardHeader>
+      ) : null}
       <CardBody className="p-0" placeholder={""}>
         <a
           href={externalLink}
           target="_blank"
+          rel="noopener noreferrer"
           className="text-blue-gray-900 transition-colors hover:text-gray-800"
         >
           <Typography variant="h5" className="mb-2" placeholder={""}>
@@ -48,10 +60,11 @@ export function ProjectCard({
         <Link
           href={externalLink}
           target="_blank"
+          rel="noopener noreferrer"
           color="gray"
-          className="flex items-center gap-2"
+          className="-m-2 flex items-center gap-2 p-2"
         >
-          Ver detalhes
+          Acessar
           <FaExternalLinkAlt
             strokeWidth={3}
             className="h-3.5 w-3.5 text-gray-900"
