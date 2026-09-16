@@ -8,23 +8,23 @@ function Hero() {
   return (
     <header className="bg-white p-8 mb-20">
       <div className="container mx-auto grid h-full gap-10 min-h-[60vh] w-full grid-cols-1 items-center lg:grid-cols-2">
-        <div className="row-start-2 lg:row-auto">
+        <div className="lg:row-auto">
           <Typography
             variant="h1"
             color="blue-gray"
             className="mb-4 lg:text-5xl !leading-tight text-3xl"
             placeholder={""}
           >
-            Desenvolvedor full-stack, do domínio ao deploy.
+            Lidero times e construo produtos full-stack, do domínio ao deploy.
           </Typography>
           <Typography
             variant="lead"
             className="mb-4 !text-gray-500 md:pr-16 xl:pr-28"
             placeholder={""}
           >
-            Sou Guilherme. Construo APIs e produtos web em TypeScript (NestJS,
-            Next.js) e Go, com fundamento em arquitetura de software — DDD,
-            Clean Architecture e código em camadas. Hoje mantenho um SaaS
+            Sou Guilherme. Lidero a equipe técnica da MamutTV e construo APIs e
+            produtos web em TypeScript (NestJS, Next.js) e Go, aplicando DDD,
+            Clean Architecture e código em camadas. Também mantenho um SaaS
             próprio em produção, do modelo de dados ao deploy contínuo.
           </Typography>
           <div className="grid">
