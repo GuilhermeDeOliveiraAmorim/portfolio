@@ -23,7 +23,7 @@ function Hero() {
             placeholder={""}
           >
             Sou Guilherme. Construo APIs e produtos web em TypeScript (NestJS,
-            Next.js) e Go, com fundamento em arquitetura de software — DDD,
+            Next.js) e Go, com fundamento em arquitetura de software: DDD,
             Clean Architecture e código em camadas. Hoje mantenho um SaaS
             próprio em produção, do modelo de dados ao deploy contínuo.
           </Typography>

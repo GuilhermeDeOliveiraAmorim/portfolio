@@ -7,14 +7,14 @@ import Link from "next/link";
 const PROJECTS = [
   {
     img: "/image/imovila.png",
-    title: "Imovila — SaaS em produção",
+    title: "Imovila: SaaS em produção",
     desc: "Portal imobiliário que conecta corretores a quem procura comprar, vender ou alugar. Monorepo pnpm + Turborepo: API NestJS com Drizzle sobre PostgreSQL, front Next.js 15 com React 19, assinaturas via Stripe, autenticação JWT com papéis, e-mail transacional e jobs agendados. Testado com Jest, Vitest e Playwright em seis perfis de dispositivo, com CI e deploy contínuo. Código privado.",
     externalLink: "https://www.imovila.com.br/",
   },
   {
     img: "/image/go-nextjs.png",
     title: "Expense Tracker",
-    desc: "API em Go seguindo Clean Architecture com camadas explícitas — domínio e ports, casos de uso, controllers e repositórios. Gin, GORM, PostgreSQL, autenticação JWT e Docker.",
+    desc: "API em Go seguindo Clean Architecture com camadas explícitas: domínio e ports, casos de uso, controllers e repositórios. Gin, GORM, PostgreSQL, autenticação JWT e Docker.",
     externalLink: "https://github.com/GuilhermeDeOliveiraAmorim/expense_tracker",
   },
   {
@@ -55,7 +55,7 @@ export function Projects() {
           className="mx-auto w-full px-4 font-normal !text-gray-500 lg:w-6/12"
           placeholder={""}
         >
-          Produto em produção e projetos de arquitetura em Go e TypeScript —
+          Produto em produção e projetos de arquitetura em Go e TypeScript:
           domínio em camadas, testes automatizados e entrega contínua.
         </Typography>
       </div>
@@ -76,8 +76,8 @@ export function Projects() {
             className="font-medium text-gray-900 underline"
           >
             Lucigreyce Teles Advocacia
-          </Link>{" "}
-          — WordPress, com foco em SEO e presença digital.
+          </Link>
+          , WordPress, com foco em SEO e presença digital.
         </Typography>
       </div>
     </section>
