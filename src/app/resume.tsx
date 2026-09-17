@@ -20,7 +20,7 @@ export function Resume() {
           >
             Ciência da Computação como base, especialização em Go e em
             desenvolvimento full stack, e prática contínua em arquitetura de
-            software — hoje também como monitor de Engenharia de Software no MBA
+            software, hoje também como monitor de Engenharia de Software no MBA
             USP/Esalq.
           </Typography>
           <Link
