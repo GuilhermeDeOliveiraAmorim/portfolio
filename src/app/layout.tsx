@@ -9,7 +9,7 @@ const roboto = Roboto({
   display: "swap",
 });
 
-const title = "Guilherme Amorim — Desenvolvedor full-stack";
+const title = "Guilherme Amorim | Desenvolvedor full-stack";
 const description =
   "Desenvolvedor full-stack com fundamento em arquitetura de software. APIs e produtos web em TypeScript (NestJS, Next.js) e Go, com DDD, Clean Architecture, testes automatizados e entrega contínua.";
 

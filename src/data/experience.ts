@@ -20,7 +20,7 @@ export const EXPERIENCE_ITEMS: ExperienceItem[] = [
     summary:
       "Plataforma de streaming para Smart TVs (Samsung Tizen e Android TV). Respondo pela arquitetura e evolução do ecossistema de APIs que sustenta o player multi-sistema operacional.",
     highlights: [
-      "Liderança técnica de uma equipe de seis pessoas — três de frontend, duas de back-end e uma de DevOps",
+      "Liderança técnica de uma equipe de seis pessoas (três de frontend, duas de back-end e uma de DevOps)",
       "Definição e evolução da arquitetura de três APIs independentes em Go",
       "Modelagem de domínio e aplicação de Clean Architecture",
       "Serviço de enriquecimento automático de metadados integrado ao TMDB",
@@ -65,7 +65,7 @@ function label(value: string) {
 }
 
 /**
- * Monta "nov 2024 — atual · 1 ano e 10 meses".
+ * Monta "nov 2024 a atual · 1 ano e 10 meses".
  *
  * A duração é calculada em tempo de render, não escrita à mão, para não
  * envelhecer sozinha no cargo atual.
@@ -86,7 +86,7 @@ export function formatPeriod(item: ExperienceItem, now = new Date()) {
   if (years > 0) parts.push(`${years} ${years === 1 ? "ano" : "anos"}`);
   if (months > 0) parts.push(`${months} ${months === 1 ? "mês" : "meses"}`);
 
-  const range = `${label(item.start)} — ${
+  const range = `${label(item.start)} a ${
     item.end ? label(item.end) : "atual"
   }`;
 
