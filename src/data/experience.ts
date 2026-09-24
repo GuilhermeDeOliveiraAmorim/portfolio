@@ -16,9 +16,10 @@ export const EXPERIENCE_ITEMS: ExperienceItem[] = [
     role: "Desenvolvedor Back-end Sênior / Líder Técnico",
     company: "MamutTV",
     start: "2024-11",
+    end: "2026-09",
     location: "Remoto",
     summary:
-      "Plataforma de streaming para Smart TVs (Samsung Tizen e Android TV). Respondo pela arquitetura e evolução do ecossistema de APIs que sustenta o player multi-sistema operacional.",
+      "Plataforma de streaming para Smart TVs (Samsung Tizen e Android TV). Responsável pela arquitetura e evolução do ecossistema de APIs que sustentou o player multi-sistema operacional.",
     highlights: [
       "Liderança técnica de uma equipe de seis pessoas (três de frontend, duas de back-end e uma de DevOps)",
       "Definição e evolução da arquitetura de três APIs independentes em Go",
